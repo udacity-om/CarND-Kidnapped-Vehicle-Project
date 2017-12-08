@@ -74,7 +74,8 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
       theta = particles[i].theta;
       
       //cout<<"Particle id "<<particles[i].id<<endl;
-            
+      
+      // Predict the particle's position 
       if(fabs(yaw_rate) < 0.001)
       {
          new_x = x + velocity*delta_t*cos(theta);
